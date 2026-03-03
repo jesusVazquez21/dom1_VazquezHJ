@@ -1,0 +1,18 @@
+El resultado es un Hash, que funciona como una "huella digital única" para un bloque de datos. Específicamente, es el resultado de un algoritmo llamado SHA-256, que es el estándar utilizado en la red de Bitcoin y otras criptomonedas.
+
+1. ¿Qué es un Hash?
+Es el resultado de pasar una información (como un archivo o un conjunto de transacciones) por una función matemática que la convierte en una cadena alfanumérica de longitud fija. No importa si el archivo original es un libro entero o una sola palabra, el hash siempre tendrá el mismo largo.
+
+2. ¿Por qué dice "Válido"?
+En el mundo del Mining (Minería de Criptomonedas), un hash es "válido" cuando cumple con una condición de dificultad impuesta por la red.
+
+Los ceros iniciales: empieza con 0000.
+
+En la minería de Bitcoin, la red exige que el hash resultante sea menor a un número específico. Esto se logra encontrando un hash que comience con una cantidad determinada de ceros.
+
+Encontrar un hash que empiece con tantos ceros requiere mucho poder de cómputo y trillones de intentos (una prueba de trabajo o Proof of Work).
+
+3. Características de este código
+Inmuta la información: Si cambiaras tan solo una coma o un espacio en los datos que generaron ese hash, el código resultante sería completamente distinto (efecto avalancha).
+
+Unidireccional: Puedes obtener el hash a partir de los datos, pero es matemáticamente imposible obtener los datos originales a partir del hash.
