@@ -1,0 +1,69 @@
+El DOM (Document Object Model), o Modelo de Objetos del Documento en español, no es un lenguaje de programación en sí mismo.
+
+En realidad, es una interfaz de programación (API) que permite a los lenguajes de programación (principalmente JavaScript) interactuar con documentos HTML o XML.
+
+El DOM es el traductor que transforma el código de una página web en una estructura que un lenguaje de programación puede entender, modificar y manipular.
+
+¿Cómo funciona?
+
+En una página web, el navegador descarga el archivo HTML. Para poder mostrarlo en pantalla y permitir que sea interactivo, el navegador transforma ese HTML en una estructura de árbol de nodos.
+
+Árbol:
+
+El Documento (window.document): Es la raíz de todo el árbol.
+
+Elementos (Etiquetas): Cada etiqueta HTML (<body>, <div>, <h1>, <p>) es un "nodo" o una rama.
+
+Atributos: Las propiedades de las etiquetas (como class, id o src).
+
+Texto: El contenido real que está dentro de las etiquetas.
+
+¿Para qué sirve?
+
+Sin el DOM, las páginas web serían completamente estáticas (como un documento PDF). Gracias al DOM, un lenguaje como JavaScript puede hacer magia en tiempo real sin necesidad de recargar la página. Con el DOM puedes:
+
+Cambiar el contenido: Modificar el texto de un párrafo o el título de un artículo.
+
+Alterar los estilos (CSS): Cambiar el color de un botón cuando el usuario pasa el mouse por encima.
+
+Añadir o eliminar elementos: Crear una nueva fila en una tabla de compras o borrar un comentario.
+
+Reaccionar a eventos: Ejecutar código cuando el usuario hace clic, escribe en el teclado o hace scroll.
+
+##################################################################################################################################################################
+
+1. ¿Qué hace document.getElementById()?
+
+Es un método de JavaScript que le dice al navegador: "Busca en todo el documento HTML un elemento que tenga exactamente este id".
+
+Los id son únicos, por lo que este método es muy rápido y preciso.
+
+
+2. Desglose línea por línea
+
+const emailInput = document.getElementById('emailInput');
+
+Qué busca: El cuadro de texto donde el usuario escribe su correo (<input id="emailInput"...>).
+
+Para qué sirve: Para que después puedas leer qué texto escribió el usuario usando emailInput.value.
+
+const btnGenerar = document.getElementById('btnGenerar');
+
+Qué busca: El botón azul que dice "Generar Token" (<button id="btnGenerar"...>).
+
+Para qué sirve: Para poder "escuchar" cuando el usuario haga clic en él (btnGenerar.addEventListener('click', ...)).
+
+const resultadoContenedor = document.getElementById('resultadoContenedor');
+
+Qué busca: El contenedor <div> que inicialmente está oculto (con la clase .hidden).
+
+Para qué sirve: Para poder quitarle la clase oculta y mostrar la sección del resultado una vez que el token haya sido generado.
+
+const tokenOutput = document.getElementById('tokenOutput');
+
+Qué busca: El pequeño cuadro de texto con fondo azul claro donde se mostrará el token final.
+
+Para qué sirve: Para inyectar el token generado dentro de ese cuadro usando tokenOutput.textContent = nuevoToken;.
+
+¿Por qué se usa const?
+Se utiliza const (constante) porque una vez que JavaScript encuentra esos elementos en la pantalla, la referencia no va a cambiar. El botón siempre será ese botón y el input siempre será ese input durante toda la ejecución de la página, lo que hace al código más seguro y eficiente.
